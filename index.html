@@ -1,0 +1,471 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>HackFresno</title>
+
+        <!-- Style Sheets -->
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap-social.css">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+        <!-- FLAVICON -->
+        <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+
+        <!-- META DATA -->
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=.75">
+        <meta itemprop="name" content="HackFresno"/>
+        <meta itemprop="description" content="HackFresno is the first student hackathon at Fresno State from April 14-15! Build cool stuff. Change the world."/>
+        <meta itemprop="image" content="https://s3-us-west-1.amazonaws.com/hackfresno/ogmeta.png"/>
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@hackfresno"/>
+        <meta name="twitter:title" content="HackFresno"/>
+        <meta name="twitter:description" content="HackFresno is the first student hackathon at Fresno State from April 14-15! Build cool stuff. Change the world."/>
+        <meta name="twitter:creator" content="@hackfresno"/>
+        <meta name="twitter:image:src" content="https://s3-us-west-1.amazonaws.com/hackfresno/ogmeta.png"/>
+        <meta property="og:title" content="HackFresno"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://hackfresno.com/"/>
+        <meta property="og:image" content="https://s3-us-west-1.amazonaws.com/hackfresno/ogmeta.png"/>
+        <meta property="og:description" content="HackFresno is the first student hackathon at Fresno State from April 14-15! Build cool stuff. Change the world."/>
+        <meta property="og:site_name" content="hackfresno"/>
+
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/script.js"></script>
+        <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+        <script src="assets/js/midnight.jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    	<script src="assets/js/modernizr.js"></script> <!-- Modernizr -->
+
+        <!-- CSS -->
+        <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+
+        <script>
+            $(document).ready(function(){
+                $.backstretch("assets/images/background-small.png");
+                $(".faq-card").flip({
+                  trigger: 'click',
+                  axis: 'x',
+                  speed:500
+                });
+                $('.faq-card').hover(
+                  function() {
+                  },
+                  function() {
+                      $(".faq-card").flip(false);
+                  }
+                );
+                window.sr = ScrollReveal({});
+                sr.reveal('.fadezzz', { duration: 1000});
+                sr.reveal('.faq-card', { duration: 500});
+                $("a").on('click', function(event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                  // Prevent default anchor click behavior
+                  event.preventDefault();
+
+                  // Store hash
+                  var hash = this.hash;
+
+                  // Using jQuery's animate() method to add smooth page scroll
+                  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                  $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                  }, 800, function(){
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                  });
+                } // End if
+              });
+            });
+        </script>
+        <!-- <script src="midnight.jquery.min.js"></script>
+        <script> // Start midnight
+        $(document).ready(function(){
+          // Change this to the correct selector.
+          $('nav.fixed').midnight();
+        });
+        </script> -->
+    </head>
+    <body data-spy="scroll" data-target="#cd-vertical-nav" data-offset="300">
+        <nav class="fixed" id="cd-vertical-nav" data-spy="affix">
+            <div id="scrollspying">
+                <ul class="nav">
+                    <li>
+                        <a href="#top" data-number="1">
+                            <span class="cd-dot"></span>
+                            <span class="cd-label nope">Welcome</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about" data-number="2">
+                            <span class="cd-dot"></span>
+                            <span class="cd-label">About</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#themes" data-number="3">
+                            <span class="cd-dot"></span>
+                            <span class="cd-label">Themes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#schedule" data-number="4">
+                            <span class="cd-dot"></span>
+                            <span class="cd-label">Schedule</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#location" data-number="5">
+                            <span class="cd-dot"></span>
+                            <span class="cd-label">Location</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#faqs" data-number="6">
+                            <span class="cd-dot"></span>
+                            <span class="cd-label">FAQs</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#sponsors" data-number="7">
+                            <span class="cd-dot"></span>
+                            <span class="cd-label">Sponsors</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <a class="cd-nav-trigger cd-img-replace">Open navigation<span></span></a>
+        <div class="main-background" id="top">
+            <div class="main-logo">
+                <img src="assets/images/FSHack2-800.png" alt="HackFresno" height="400" width="400">
+                <div class="date-and-location">
+                    <h2 class="display-5">
+                        April 14-15 / Fresno State
+                    </h2>
+                    <p class="signup-hyper">
+                        <div class="row" style="padding-right: 80px !important">
+                            <div class="col-sm-3 col-md-3 col-lg-3"></div>
+                            <p style="width: 260px !important" class="typeform-share signup-button signup-text">Online Applications Closed!</p>
+                            <!-- <script>(function(){
+                              var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm_share',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';
+                              if(!gi.call(d,id)){
+                                js=ce.call(d,'script');
+                                js.id=id;js.src=b+'share.js';
+                                q=gt.call(d,'script')[0];
+                                q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');
+                                qs.rel='stylesheet';qs.id=id;
+                                qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)
+                              }
+                            })()
+                            </script> -->
+
+                            <!-- <div class="signup-button col-sm-6 col-md-6 col-lg-6">
+                              <h6 class="display-5 signup-text">
+                                  APPLY
+                              </h6>
+                            </div> -->
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="space"></div>
+            <div class="about" id="about">
+                <div class="container pt-3 pb-3 fadezzz">
+                    <h1 class="display-5" style="padding-top: 50px;padding-bottom: 30px;color:#084C8C;font-weight:bold">What is HackFresno?</h1>
+                    <div class="about-text">
+                      <p style="font-size: 20px;">
+                        HackFresno is a student hackathon at Fresno State
+                        that encourages creativity and innovation while solving
+                        some of the world's toughest problems. Stay up for 24 hours with the
+                        coolest and brightest people you will ever meet, and help design a product
+                        that can improve the world. This year, we are focusing all projects on four core
+                        themes. These themes encompass some of today's toughest issues, and encourage teams
+                        to think of ways to use their skills to benefit the world around them.
+                      </p>
+                      <p style="font-size: 20px;">
+                        Everyone is welcome, from the most experienced developers and
+                        designers to first-time programmers with a drive to solve our biggest challenges.
+                        Regardless of your skill, there is a place for you at HackFresno.
+                      </p>
+                    </div>
+                </div>
+            </div>
+        <div class="row no-gutters" style="border-top: 1px solid #f0f0f0">
+            <div class="col-md-12 theme-header text-center" id="themes" style="height: 155px">
+                <h1 class="display-5 text-center fadezzz" style="padding-top: 35px; padding-bottom: 60px; color:white;font-weight:bold">Themes</h1>
+            </div>
+            <div class="col-md-3 first-theme vertical-center" style="height: 300px">
+                <div class="container theme-text text-center">
+                  <h2 class="display-5 theme-icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></h2>
+                  <h2 class="display-5" style="color:black">Education</h2>
+                  <div class="first-theme-text">
+                      <p>
+While technology has progressed rapidly, the way we educate students has largely stayed the same. Develop projects that help foster learning both in and out of the classroom, and that can help schools  better provide resources to their students.                      </p>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-3 second-theme vertical-center" style="height: 300px">
+                <div class="container theme-text text-center">
+                    <h2 class="display-5 theme-icon"><i class="fa fa-heartbeat" aria-hidden="true"></i></h2>
+                    <h2 class="display-5" style="color:black">Health & Wellness</h2>
+                    <div class="second-theme-text">
+                        <p>
+Technology has drastically improved the healthcare industry over the last century. Help take it a step further. Develop tools for doctors and hospitals to better care for patients, or design products that encourage people to maintain healthy lifestyles.                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 third-theme vertical-center" style="height: 300px">
+                <div class="container theme-text text-center">
+                    <h2 class="display-5 theme-icon"><i class="fa fa-globe" aria-hidden="true"></i></h2>
+                    <h2 class="display-5" style="color:black">Environment & Agriculture</h2>
+                    <div class="third-theme-text">
+                        <p>
+Help design solutions to keep the Earth safe and habitable for future generations. Projects in this category can include water management for California farmers, energy usage optimization for households, or tools to enforce environmental policy.                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 fourth-theme vertical-center" style="height: 300px">
+                <div class="container theme-text text-center">
+                    <h2 class="display-5 theme-icon"><i class="fa fa-handshake-o" aria-hidden="true"></i></h2>
+                    <h2 class="display-5" style="color:black">Social Good</h2>
+                    <div class="fourth-theme-text">
+                        <p>
+Develop a project that can help bring our world closer together. Projects in this category can have applications in (but not limited to) government, philantropy, or socioeconomic inequality.                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="schedule" id="schedule">
+            <div class="container pb-3 fadezzz">
+                <h1 class="display-5 text-center" style="padding-top: 50px;padding-bottom: 30px;color:white;font-weight:bold">Schedule</h1>
+                <div class="schedule-embed">
+                  <iframe src="https://guidebook.com/guide/94557/schedule/" height=700px width=100%>
+                </div>
+            </div>
+        </div>
+        <div class="row no-gutters">
+            <div class="col-md-12 location-header" id="location" style="height: 170px">
+                <h1 class="display-5 text-center fadezzz" style="padding-top: 60px; padding-bottom: 50px;color:#084C8C;font-weight:bold">Location</h1>
+            </div>
+            <!-- <div class="col-md-2 first-location"></div> -->
+            <div class="col-md-7 second-location text-center">
+                <div class="second-location-title">FRESNO, CA</div>
+                <div class="second-location-sub">Fresno State | North Gym 118</div>
+            </div>
+            <div class="col-md-5 fourth-location">
+                <div class="map-wrap">
+                    <div class="overlay" onClick="style.pointerEvents='none'"></div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3194.212666470313!2d-119.75389194917815!3d36.81342352455657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80945d050305ef45%3A0xd70c5f44616e7281!2sNorth+Gym%2C+Campus+Dr%2C+Fresno%2C+CA+93740!5e0!3m2!1sen!2sus!4v1486822024899" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>                </div>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="row no-gutters" style="border-top: 1px solid rgba(255,255,255,0.8);">
+                <div class="col-md-12 faq-header" id="faqs" style="height:160px">
+                    <h1 class="display-5 text-center fadezzz" style="padding-top: 60px;color:#084C8C;font-weight:bold">Frequently Asked Questions</h1>
+                </div>
+                <div class="col-md-3 faq-card">
+                    <div class="front">
+                        <p class="pt-3 pl-3 pr-3 faq-que">What is a hackathon?</p>
+                    </div>
+                    <div class="back">
+                        <p class="pt-3 pl-3 pr-3 faq-ans">A hackathon is a nonstop design and innovation competition. Over the 24 hours, teams develop projects that solve real-world problems. At the end of the hackathon, teams show off their work to judges and other participants.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 faq-card">
+                    <div class="front">
+                        <p class="pt-3 pl-3 pr-3 faq-que">So, we're not breaking into anyone's computers right?</p>
+                    </div>
+                    <div class="back">
+                        <p class="pt-3 pl-3 pr-3 faq-ans">Nope! In this case, "hacking" refers to collaborating on a task, usually with code, to solve a specific problem. <a href="https://medium.com/essays-by-kern/what-is-a-hackathon-c2162b893b0a">Read this</a> great article that goes further in depth about hackathons.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 faq-card">
+                    <div class="front">
+                        <p class="pt-3 pl-3 pr-3 faq-que">What does it cost to attend?</p>
+                    </div>
+                    <div class="back">
+                        <p class="pt-3 pl-3 pr-3 faq-ans">Nothing at all! We provide all meals, snacks, and swag for free, so that all you have to worry about is what you'll be building.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 faq-card">
+                    <div class="front">
+                        <p class="pt-3 pl-3 pr-3 faq-que">So what do I bring with me?</p>
+                    </div>
+                    <div class="back">
+                        <p class="pt-3 pl-3 pr-3 faq-ans">You will need your student ID, government ID (to check out hardware), as well as your own computer and any other small hardware you may want to hack with. We also recommend a sleeping bag and toiletries to stay fresh and rested.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 faq-card">
+                    <div class="front">
+                        <p class="pt-3 pl-3 pr-3 faq-que">What if I'm a beginner?</p>
+                    </div>
+                    <div class="back">
+                        <p class="pt-3 pl-3 pr-3 faq-ans">Not to worry! We will have beginning hacking workshops at the start of the event. There will also be tech talks and mentors present throughout to help you with your ideas.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 faq-card">
+                    <div class="front">
+                        <p class="pt-3 pl-3 pr-3 faq-que">How do teams work?</p>
+                    </div>
+                    <div class="back">
+                        <p class="pt-3 pl-3 pr-3 faq-ans">Teams can be up to five members. If you don't have a team, don't worry! We will help you find a team once you get to the event.</p>
+                </div>
+            </div>
+                <div class="col-md-3 faq-card">
+                    <div class="front">
+                        <p class="pt-3 pl-3 pr-3 faq-que">Are there any rules?</p>
+                    </div>
+                    <div class="back">
+                        <p class="pt-3 pl-3 pr-3 faq-ans">We follow the MLH code of conduct.<br><a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf"> READ HERE</a></p>
+                    </div>
+                </div>
+                <div class="col-md-3 faq-card" style="margin-bottom:50px!important">
+                    <div class="front">
+                        <p class="pt-3 pl-3 pr-3 faq-que">Help!</p>
+                    </div>
+                    <div class="back">
+                        <p class="pt-3 pl-3 pr-3 faq-ans">If you have any other questions, reach out to us at any time.<br><a href="mailto:team@hackfresno.com">team@hackfresno.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container pb-3">
+        <div class="sponsors row no-gutters pb-3"  id="sponsors">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="sponsors-info text-center">
+                    <h1 class ="display-4 fadezzz" style="color: white;">Sponsors</h1>
+                    <p class ="pt-4 fadezzz " style="font-size:25px;color: white;font-weight:bold">Interested in sponsoring? Contact <a href="mailto:team@hackfresno.com" style="color:white">team@hackfresno.com</a></p>
+                    <div class="row no-gutters text-center tier-1">
+                    </div>
+                    <div class="pb-3 row no-gutters text-center tier-2">
+                        <div class="col-md-6">
+                          <a href="http://bitwiseindustries.com/">
+                            <img class="logo bitwise fadezzz" src="assets/images/logos/Bitwise_white.png">
+                          </a>
+                        </div>
+                        <div class="col-md-6">
+                          <a href="http://www.adobe.com/">
+                            <img class="logo adobe fadezzz" src="assets/images/logos/Adobe_standard_logo_RGB.jpg">
+                          </a>
+                        </div>
+                        <div class="col-md-6">
+                          <a href="http://www.onesense.io/index.html">
+                            <img class="logo onesense fadezzz" src="assets/images/logos/onesense.png">
+                          </a>
+                        </div>
+                        <div class="col-md-6">
+                          <a href="http://linkuscorp.com/">
+                            <img class="logo linkus fadezzz" src="assets/images/logos/linkus.png">
+                          </a>
+                        </div>
+                    </div>
+                    <div class="pt-3 pb-3 row no-gutters text-center tier-3">
+                        <div class="pt-3 col-md-4 pb-3">
+                          <a href="http://fresnostate.edu/engineering/">
+                            <img class="logo lcoe fadezzz" src="assets/images/logos/Lyles College Eng-stacked-White.png">
+                          </a>
+                        </div>
+                        <div class="col-md-4 pb-3">
+                          <a href="https://github.com/">
+                            <img class="logo github fadezzz" src="assets/images/logos/GitHub-Mark-Light-120px-plus.png">
+                          </a>
+                        </div>
+                        <div class="pt-3 col-md-4 pb-3">
+                          <a href="http://www.ieee.org/index.html">
+                            <img class="logo ieee fadezzz" src="assets/images/logos/ieee.png">
+                          </a>
+                        </div>
+                    </div>
+                    <div class="row no-gutters text-center tier-4">
+                        <div class="pt-3 col-md-4 pb-3">
+                          <a href="http://www.fresnostate.edu/studentaffairs/">
+                            <img class="logo fssaem fadezzz" src="assets/images/logos/fssaem.png">
+                          </a>
+                        </div>
+                        <div class="pt-3 col-md-4 pt-3">
+                          <a href="https://www.stickermule.com/">
+                            <img class="logo stickermule fadezzz" src="assets/images/logos/stickermule.png">
+                          </a>
+                        </div>
+                        <div class="pt-3 col-md-4 pb-3">
+                          <a href="https://aws.amazon.com/">
+                            <img class="logo aws fadezzz" src="assets/images/logos/aws.png ">
+                          </a>
+                        </div>
+                        <div class="pt-3 col-md-4 pb-3">
+                          <a href="https://www.microsoft.com/en-us/">
+                            <img class="logo microsoft fadezzz" src="assets/images/logos/microsoft.png ">
+                          </a>
+                        </div>
+                        <div class="pt-3 col-md-4 pb-3">
+                          <a href="http://www.cisco.com/">
+                            <img class="logo cisco fadezzz" src="assets/images/logos/cisco.png ">
+                          </a>
+                        </div>
+                        <div class="pt-3 col-md-4 pb-3">
+                          <a href="https://www.salesforce.com/">
+                            <img class="logo salesforce fadezzz" src="assets/images/logos/salesforce.png ">
+                          </a>
+                        </div>
+                        <div class="pt-3 col-md-4 pb-3">
+                          <a href="https://www.fresnounified.org/">
+                            <img class="logo fusd fadezzz" src="assets/images/logos/fusd.png ">
+                          </a>
+                        </div>
+                    </div>
+                    <div class="fadezzz row no-gutters text-center pt-3 pb-3">
+                        <div class="col-md-12 text-center pb-3 pt-3">
+                            <h1 class ="display-4 fadezzz" style="color: white;">Partners</h1>
+                        </div>
+                        <div class="pt-3 col-md-4 pt-3">
+                            <img style="max-width: 130px" class="logo" src="assets/images/logos/ieeefresno.png">
+                        </div>
+                        <div class="pt-3 col-md-4 pt-3">
+                          <a href="https://mlh.io/">
+                            <img style="width: 230px;" src="assets/images/logos/mlh-logo-white.svg" />
+                          </a>
+                        </div>
+                        <div class="pt-3 col-md-4 pb-3">
+                          <a href="https://www.fresnostate.edu/adminserv/technology/">
+                            <img class="logo fsts fadezzz" src="assets/images/logos/ts_logo_trans_stacked-white.png">
+                          </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:absolute;left:50px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/na-2017/events?utm_source=na-2017&utm_medium=TrustBadge&utm_campaign=na-2017&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg" alt="Major League Hacking 2017 Hackathon Season" style="width:100%"></a>
+    </body>
+    <div class="footer no-gutters pt-3">
+        <div class="container pt-3 text-center">
+            <a href="https://twitter.com/hackfresno" target="_blank" class="btn btn-social-icon">
+              <span class="fa fa-twitter"></span>
+            </a>
+            <a href="https://www.facebook.com/HackFresno/" target="_blank" class="btn btn-social-icon">
+              <span class="fa fa-facebook"></span>
+            </a>
+            <a href="https://soundcloud.com/thechainsmokers/closer" target="_blank" class="btn btn-social-icon">
+              <span class="fa fa-soundcloud"></span>
+            </a>
+            <div class="row pt-3">
+                <div class="col-md-12 text-center">
+                    <h5 class="display-6 pr-2" style="color: white;display:inline-block">Made with </h5>
+                    <i class="em em-heart" style="color: white;display:inline-block"></i>
+                    <h5 class="display-6 pl-2" style="color: white;display:inline-block">by The HackFresno Team</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</html>
