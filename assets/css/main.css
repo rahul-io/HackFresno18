@@ -7,10 +7,15 @@ body {
   font-family: 'Raleway', sans-serif;
   font-weight: 400; // Corresponds to the Bold 400 style
 }
-h1, h2, h3, h4, h5, h6,
+/* h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6{
-  font-family: 'Raleway', sans-serif !important;
-  font-weight: 700 !important;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+} */
+
+@font-face{
+  font-family: 'Futura';
+  src: url('fonts/lovely_font.eot');
 }
 
 .space{
@@ -102,6 +107,10 @@ h1, h2, h3, h4, h5, h6,
 
 .signup-hyper{
     text-decoration:none!important;
+}
+
+.title{
+  font-family: 'Futura', sans-serif !important;
 }
 
 .about{
