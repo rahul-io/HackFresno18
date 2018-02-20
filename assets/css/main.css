@@ -30,11 +30,13 @@ body {
 }
 .main-logo {
     width: 400px;
-    height: 600px;
+    height: 400px;
     position: absolute;
-    top: 39%;
+    top: 35%;
+    bottom: 20%;
     left: 50%;
     margin: -200px 0 0 -200px;
+    
 }
 .date-and-location{
     margin-top: 17px;
@@ -107,10 +109,40 @@ body {
 
 .signup-hyper{
     text-decoration:none!important;
+    position: relative;
+    
 }
 
 .title{
-  font-family: 'Futura', sans-serif !important;
+  font-family: futura-pt-bold, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 6.2vw;
+      padding-top:280px;
+    position: relative;
+    display: inline-block;
+    text-shadow: #000000 5px 0 40px;
+
+   
+}
+.date1 {
+    font-family: lato, sans-serif;
+    font-size: 5.2vw;
+    font-weight: 300;
+    line-height: .5em;
+    position: relative;
+    text-shadow: #000000 1px 5px 5px;
+    
+}
+.date2 {
+    font-family: lato, sans-serif;
+    font-size: 3.2vh;
+    font-style: italic;
+    font-weight: 200;
+    line-height: 3.8em;
+    position: relative;
+    text-shadow: #000000 1px 5px 5px;
+    
 }
 
 .about{
@@ -198,7 +230,7 @@ body {
 
 }
 .first-theme{
-    background-color: rgba(211, 211, 211,0.9);
+    background-color: rgba(211, 211, 211, 0.75);
     color: black;
     cursor: pointer;
 }
@@ -275,35 +307,36 @@ body {
     -webkit-transition: top 0.4s;
 }
 .second-theme{
-    background-color: rgba(211, 211, 211,0.9);
+    background-color: rgba(211, 211, 211, 0.75);
     color: black;
     cursor: pointer;
 
 }
 .third-theme{
-    background-color: rgba(211, 211, 211,0.9);
+    background-color: rgba(211, 211, 211, 0.75);
     color: black;
     cursor: pointer;
 
 }
 .fourth-theme{
-    background-color: rgba(211, 211, 211,0.9);
+    background-color: rgba(211, 211, 211, 0.75);
     color: black;
     cursor: pointer;
 
 }
 .faq{
     width:100%;
+   
     background-color: rgba(255,255,255,1);
     /*background-color: rgba(18, 67, 90,0.5);*/
 }
 .faq-card{
-    height: 250px;
-    border: 15px rgba(255,255,255,0) solid;
+    height: 320px;
+    border: 10px #ffffff solid;
 }
 
 .faq-que{
-  font-size: 16pt;
+  font-size: 14pt;
   font-weight: bold;
 }
 
